@@ -17,6 +17,33 @@ Measure the speed of light **c** using a rotating chopper ring (Fizeau method) b
 - **License**: MIT.
 
 This project implements the classic **Fizeau** rotating‑wheel measurement: a beam passes through a gap in a rotating ring, travels to a distant mirror, returns, and is blocked when the ring advances by half a pitch during the round‑trip time.
+```
+PhotonChopper-Lab/
+├─ README.md                 ← start here
+├─ LICENSE (MIT)
+├─ BOM.csv                   ← parts list
+├─ docs/
+│  ├─ physics.md             ← equations and derivation
+│  ├─ wiring.md              ← clear wiring guide
+│  ├─ build-checklist.md     ← step-by-step assembly & test
+│  └─ brushless-variant.md   ← optional path to make a BLDC using this aesthetic
+├─ hardware/
+│  └─ openscad/
+│     └─ rotor.scad          ← parametric scalloped/slotted rotor (your ring, but rigid)
+├─ electronics/              ← (placeholder for future schematics)
+├─ firmware/
+│  └─ arduino/
+│     └─ FizeauLogger/
+│        └─ FizeauLogger.ino ← Arduino code: RPM + photodiode to CSV over Serial
+├─ software/
+│  ├─ requirements.txt       ← pyserial, pandas, numpy, matplotlib
+│  ├─ log_serial.py          ← capture serial to CSV
+│  ├─ analyze_extinctions.py ← compute c from extinction RPMs
+│  └─ plot_log.py            ← plot RPM & photodiode over time
+└─ data/
+   └─ extinctions.csv        ← example extinction RPMs
+
+```
 
 ### Core equations
 With **N** gaps (≈ number of teeth) and rotation frequency **f** (rev/s), the first extinction occurs when
