@@ -1,0 +1,14 @@
+Category,Item,Example/Notes,Qty
+Rotor,3D printed scalloped/slotted disk,OpenSCAD `rotor.scad` (set N),1
+Drive,Brushless DC motor (outrunner) or drill press,28-35 size BLDC or lathe/drill press,1
+Drive,ESC (if BLDC),30A with governor mode,1
+Power,Lithium battery or bench supply,2S–4S Li‑ion/LiPo or 12V bench,1
+Sensing,IR reflective sensor or slotted opto (tach),TCRT5000 or GP1S series,1
+Sensing,Photodiode + resistor,BPW34 + 100kΩ or phototransistor module,1
+Control,Arduino‑compatible board,Nano/Uno,1
+I/O,Pushbutton (mark event),Momentary,1
+I/O,LED + 220Ω (optional cue),,1
+Mech,Bearings/hub/clamp,5–8 mm bore to match motor shaft,1
+Optics,Laser pointer (≤5mW) + front-surface mirror,Match eyewear to wavelength,1
+Shroud,Acrylic guard + standoffs/bolts,Enclose rotor fully,1
+Cables,Jumper wires,Assorted,1
